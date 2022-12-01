@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="css2/lib/themify-icons.css" rel="stylesheet">
+    
+    <link rel="icon" href="./images/logo.png" type="image/icon type">
+    <title>Aggregated Snapshot Voting Dashboard</title>
+  </head>
+  <body>
+
+
+    <!-- top navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebar"
+          aria-controls="offcanvasExample"
+        >
+          <span class="navbar-toggler-icon" data-bs-target="#sidebar"></span>
+        </button>
+        <a
+          class="navbar-brand me-auto ms-lg-0 ms-3 text-uppercase fw-bold"
+          href="http://gaiagovernor.com/"
+          ><img src="./images/logo.png" style="height: 40px;"></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#topNavBar"
+          aria-controls="topNavBar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="topNavBar">
+          <form class="d-flex ms-auto my-3 my-lg-0">
+            
+          </form>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Research</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="http://gaiagovernor.com/">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <!--a
+                class="nav-link dropdown-toggle ms-2"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-person-fill"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul -->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- top navigation bar -->
+    <!-- offcanvas -->
+    <div
+      class="offcanvas offcanvas-start sidebar-nav bg-dark"
+      tabindex="-1"
+      id="sidebar"
+    >
+      <div class="offcanvas-body ">
+        <nav class="navbar-dark">
+          <ul class="navbar-nav">
+            <li>
+              
+            </li>
+            <li>
+              <a href="./index.html" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-speedometer2"></i></span>
+                <span>Overview Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="./protocol.html" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-server"></i></span>
+                <span>Protocol </span>
+              </a>
+            </li>
+            <li>
+              <a href="./proposal.html" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-bar-chart-line"></i></span>
+                <span>Proposal <h8 style="color: rgb(120, 255, 120);">(Live) </h8> </span>
+              </a>
+            </li>
+            <li>
+              <a href="./voters.html" class="nav-link px-3 active">
+                <span class="me-2"><i class="bi bi-people"></i></span>
+                <span>Voters <h8 style="color: rgb(120, 255, 120);">(Live) </h8> </span>
+              </a>
+            </li>
+            <li class="my-1"><hr class="bg-dark " /></li>
+            <li>
+              <div class="text-muted small fw-bold text-uppercase px-3 mb-3">
+                Chains 
+              </div>
+            </li>
+            <li>
+              <a href="./aave.html" class="nav-link px-3">
+                <span class="me-2"><i class="fa-solid fa-ghost"></i>
+                </span>
+                <span>AAVE </span>
+              </a>
+            </li>
+            <li>
+              <a href="./impossible.html" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-grid-3x3-gap"></i>
+                </span>
+                <span>Impossible </span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link px-3">
+                <span class="me-2"><i class="bi bi-gear"></i></span>
+                <span>More protocol (coming soon)</span>
+              </a>
+            </li>
+            <li>
+              
+            </li>
+            
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- offcanvas -->
+    <main class="mt-5 pt-3 bg-dark text-white">
+      <div class="container-fluid">
+        
+       
+
+        
+
+        <div class="row">
+          <div class="col-md-12">
+            <h4>Most recent Proposal By Protocol</h4> <h8 style="color: red">(Refresh if not loading)</h8>
+            <h6>Check by clicking the link below
+            </h6>
+          </div>
+        </div>
+
+             
+
+        <div class="row">
+
+
+          <div class="col-md-12 mb-3">
+            <div class="card">
+              <div class="card-header bg-dark text-white">
+                <span><i class="bi bi-table me-2"></i></span> Most recent proposal 
+              </div>
+              <div class="card-body bg-dark text-white">
+                <input class="ms-auto my-3 my-lg-0" type="text" name="search" placeholder="Search Protocol" id="search" class="form-control"/>
+                <button class="btn btn-primary" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+
+                <div class="table-responsive ">
+
+                  <table id="example" class="table text-white data-table">
+
+                    <div id="preloader"></div>
+
+
+                    <caption id="table_title">Proposal by protocol</caption>
+                    <tr id="table_header2">
+                      
+                          <th data-column="id" data-order="desc">Protocol &#9650;</th>
+                          <th data-column="website" data-order="desc">Domain &#9650;</th>
+                          <th data-column="state" data-order="desc">Proposal State &#9650;</th>
+                          <th data-column="title" data-order="desc">Proposal &#9650;</th>
+
+                        
+
+                    </tr>
+                    <tbody id="swap_table">
+
+
+                    </tbody>
+
+
+
+                </table>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h6>Powered by <a href="https://cryptostats.community/" style="font-size:20px; color: aquamarine;">CryptoStats </a> & <a href="http://flipsidecrypto.xyz/" style="font-size:20px; color: aqua;">flipsidecrypto</a>
+            </h6>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.2/dist/chart.min.js"></script>
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/jquery.dataTables.min.js"></script>
+    <script src="./js/dataTables.bootstrap5.min.js"></script>
+    <script src="./js/script_4.js"></script>
+
+
+    <script>
+
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener("load", function(){
+        loader.style.display = "none"
+      })
+    </script>
+  
+
+</body>
+</html>
